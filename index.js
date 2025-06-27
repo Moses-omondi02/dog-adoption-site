@@ -164,6 +164,17 @@ document.addEventListener('DOMContentLoaded', function() {
             secondaryFilterBtn.querySelector('i').classList.add('fa-chevron-down');
         }
     });
-    
+    function addHoverEffects() {
+        document.querySelectorAll('.dog-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.03)';
+                this.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
+            });
+                card.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+                this.style.boxShadow = '0 5px 15px rgba(0,0,0,0.1)';
+            });
+        });
+    } 
     fetchDogs().then(addHoverEffects);
 });
