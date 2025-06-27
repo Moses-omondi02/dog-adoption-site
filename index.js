@@ -141,6 +141,8 @@ document.addEventListener('DOMContentLoaded', function() {
             applyFilters();
         });
     });
+        resetBtn.addEventListener('click', resetFilters);
+
     
     fetchDogs().then(addHoverEffects);
 });
