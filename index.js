@@ -184,5 +184,12 @@ document.addEventListener('DOMContentLoaded', function() {
             this.reset();
         }
     });
+      const currentTheme = localStorage.getItem('theme') || 'light';
+    if (currentTheme === 'dark') {
+        document.body.classList.add('dark-mode');
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+        themeToggle.innerHTML = '<i class="fas fa-sun"></i> Light Mode';
+    }
     fetchDogs().then(addHoverEffects);
 });
