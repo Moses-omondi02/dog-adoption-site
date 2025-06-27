@@ -142,7 +142,21 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
         resetBtn.addEventListener('click', resetFilters);
-
+  themeToggle.addEventListener('click', function() {
+        document.body.classList.toggle('dark-mode');
+        
+        if (document.body.classList.contains('dark-mode')) {
+            localStorage.setItem('theme', 'dark');
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+            themeToggle.innerHTML = '<i class="fas fa-sun"></i> Light Mode';
+        } else {
+            localStorage.setItem('theme', 'light');
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-moon');
+            themeToggle.innerHTML = '<i class="fas fa-moon"></i> Dark Mode';
+        }
+    });
     
     fetchDogs().then(addHoverEffects);
 });
