@@ -176,5 +176,13 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     } 
+    newsletterForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const email = this.querySelector('input[type="email"]').value;
+        if (email) {
+            alert(`Thanks for subscribing with ${email}!`);
+            this.reset();
+        }
+    });
     fetchDogs().then(addHoverEffects);
 });
