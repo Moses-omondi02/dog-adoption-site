@@ -157,6 +157,13 @@ document.addEventListener('DOMContentLoaded', function() {
             themeToggle.innerHTML = '<i class="fas fa-moon"></i> Dark Mode';
         }
     });
+       document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && !secondaryFilters.classList.contains('hidden')) {
+            secondaryFilters.classList.add('hidden');
+            secondaryFilterBtn.querySelector('i').classList.remove('fa-chevron-up');
+            secondaryFilterBtn.querySelector('i').classList.add('fa-chevron-down');
+        }
+    });
     
     fetchDogs().then(addHoverEffects);
 });
