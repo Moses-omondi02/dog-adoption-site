@@ -1,6 +1,8 @@
 ## Dog Adoption site 
 # Descprition 
 This is a simple dog adoption site that allows the user to choose a dog that suits their needs,by filtering through the available dogs by age and gender.
+Here is a link to the deployed site.
+https://moses-omondi02.github.io/dog-adoption-site/
 
 # Project Structure
 dog-adoption-site/
